@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 1rem 5px;
+  background-color: var(--Cream);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  margin-top: 50px;
+  width: 350px;
+  background-color: var(--White);
+  border-radius: 15px;
+}
+.text__container {
+  padding: 20px 38px;
+}
+.product__img__mobile {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.title {
+  font-family: "Fraunces", serif;
+  font-size: 1.8rem;
+  margin: 0;
+}
+.Perfume,
+.des,
+.original__price {
+  color: var(--Dark-grayish-blue);
+}
+.Perfume {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.des {
+  line-height: 1.5;
+  font-size: 14px;
+}
+.price__container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.current__price {
+  font-family: "Fraunces", serif;
+  color: var(--Dark-cyan);
+  font-size: 2rem;
+  margin: 0;
+}
+.original__price {
+  text-decoration: line-through;
+}
+button {
+  border-radius: 5px;
+  width: 100%;
+
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  margin: 15px 0 15px 0;
+}
+
+button p {
+  letter-spacing: 0.3px;
+}
+button:hover {
+  background-color: #194031;
+  cursor: pointer;
+}
+.attribution {
+  margin-top: 50px;
+}
+.attribution a {
+  color: #194031;
+  text-decoration: none;
+}
+.attribution a:hover {
+  cursor: pointer;
+  color: var(--Dark-cyan);
+}
+@media (max-width: 48em) {
+  .product__img__desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 48em) {
+  .container {
+    display: flex;
+    width: 600px;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .product__img__mobile {
+    display: none;
+  }
+  .product__img__desktop {
+    width: 50%;
+    border-radius: 15px 0 0 15px;
+  }
+  .price__container {
+    margin: 25px 0 25px 0;
+  }
+}
